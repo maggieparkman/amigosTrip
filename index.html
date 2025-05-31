@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weekend Trip!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #009fff, #ec2f4b);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    section {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .accordion {
+      background-color: #fff;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      padding: 1rem;
+      text-align: left;
+      transition: 0.3s;
+    }
+    .accordion.active, .accordion:hover {
+      background-color: #e0f7ff;
+    }
+    .panel {
+      padding: 0 1rem;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+      border-left: 3px solid #009fff;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      height: 200px;
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌄 Weekend Adventure Trip</h1>
+    <p>Join us for an unforgettable weekend escape!</p>
+  </header>
+
+  <section>
+    <h2>📍 Trip Overview</h2>
+    <p>We’re heading to the mountains this weekend for fun, bonding, and beautiful views. Expect hikes, games, good food, and lots of great memories.</p>
+  </section>
+
+  <section>
+    <h2>🗓️ Itinerary</h2>
+
+    <div class="accordion">Friday - Arrival & Campfire</div>
+    <div class="panel">
+      <p>Arrival between 5-7 PM. Campfire with snacks and music from 8 PM. Bring your own instruments if you play!</p>
+    </div>
+
+    <div class="accordion">Saturday - Hiking & Exploring</div>
+    <div class="panel">
+      <p>Morning hike to the lookout point. Group lunch at 1 PM. Free time and games in the evening.</p>
+    </div>
+
+    <div class="accordion">Sunday - Relax & Return</div>
+    <div class="panel">
+      <p>Late breakfast, photo session, and farewell picnic before heading back around 2 PM.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>📸 Memories from Last Trip</h2>
+    <div class="gallery">
+      <img src="/images/girls_eating_Medium.jpg" alt="Nice dinner" />
+      <img src="/images/guys_eating_Medium.jpg" alt="Enjoyed by everyone" />
+      <img src="terrace_Medium.jpg" alt="With a nice saturday activity" />
+    </div>
+  </section>
+
+  <section>
+    <h2>📝 RSVP / Survey</h2>
+    <p>Please let us know if you're coming and any preferences you have for the trip.</p>
+    <iframe src="https://docs.google.com/forms/d/e/your-google-form-id/viewform?embedded=true">Loading…</iframe>
+  </section>
+
+  <script>
+    // Accordion functionality
+    const acc = document.querySelectorAll(".accordion");
+    acc.forEach(el => {
+      el.addEventListener("click", function() {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+
+</body>
+</html>
