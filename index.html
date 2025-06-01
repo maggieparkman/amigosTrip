@@ -12,12 +12,36 @@
       background: #f9f9f9;
       color: #333;
     }
-    header {
+    /* header {
       background: linear-gradient(to right, #009fff, #ec2f4b);
       color: white;
       padding: 2rem 1rem;
       text-align: center;
+    } */
+    header {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                  url('images/banner_be.jpeg') center/cover no-repeat;
+      color: white;
+      height: 300px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
+
+    header h1 {
+      font-size: 3rem; /* Bigger headline */
+      margin: 0.5rem 0;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 1.5rem; /* Bigger subtext */
+      margin: 0.5rem 0;
+      font-weight: 500;
+    } 
+    
+
     section {
       padding: 2rem 1rem;
       max-width: 900px;
@@ -70,21 +94,30 @@
 <body>
 
   <header>
-    <h1>🌄 Weekend Adventure Trip</h1>
-    <p>Join us for an unforgettable weekend escape!</p>
+    <div class="overlay"></div>
+      <h1>Friendship & Tide: The Weekend Vibe</h1>
+      <p>There’s something in the breeze you don’t want to miss.</p>
+    <div>
   </header>
 
   <section>
     <h2>📍 Trip Overview</h2>
-    <p>We’re heading to the mountains this weekend for fun, bonding, and beautiful views. Expect hikes, games, good food, and lots of great memories.</p>
+    <p>Something unforgettable is on the horizon.
+This weekend, we’ll wander fairytale streets, uncover hidden corners, and follow whispers of the past. Expect sweet surprises—and a final stop where the air carries a hint of salt and something unspoken.
+Bring curiosity and your best laugh. The rest is waiting.</p>
   </section>
 
   <section>
     <h2>🗓️ Itinerary</h2>
 
-    <div class="accordion">Friday - Arrival & Campfire</div>
+    <div class="accordion">Friday - Brews-Views & Game Night</div>
     <div class="panel">
-      <p>Arrival between 5-7 PM. Campfire with snacks and music from 8 PM. Bring your own instruments if you play!</p>
+      <li>Meet up in Weert at our place at 9:15 a.m. </li>
+      <li>Nice picnic for lunch</li>
+      <li>Activity: A Taste Afloat</li>
+      <li>House arrival around 17:00</li>
+      <li>Dine 🇲🇽 & Unwind 🍻</li>
+      <li>Game On!</li>
     </div>
 
     <div class="accordion">Saturday - Hiking & Exploring</div>
